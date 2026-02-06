@@ -1,0 +1,134 @@
+/* :root {
+    --blogCardImg: url("/images/spacecraft-dark.jpg");
+} */
+
+.blog-wrapper {
+    background-color: #0f3f5b;
+}
+
+.blogs-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0 40px;
+}
+
+.blogs-text-container {
+    color: #fff;
+    width: 71%;
+}
+
+.blogs-text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;    
+}
+.blogs {
+    background-color: #0f3f5b;;
+}
+
+.blog-card {
+    margin-bottom: 30px;
+}
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-title {
+    font-size: 1.25rem;
+    margin: 6px 0;
+}
+.blog-date {
+    font-size: 0.9rem;
+    color: #3aabf5;
+}
+.blog-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 6px 0;
+}
+
+.blog-card-link {
+    font-size: 1rem;
+    color: rgb(72, 72, 255);
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.blogs-image-container {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 24px;
+    margin-left: 20px;
+}
+
+.blog-image-card {
+    width: 90%;
+    background-color: #fff;
+    padding: 6px 6px 4px;
+}
+
+.blog-image-card img {
+    width: 100%;
+}
+
+.blog-image-card-var2 {
+   /* background: var(--blogCardImg) no-repeat center; */
+   background-color: green;
+   background-size: cover;
+   min-height: 191px;
+   width: 96%;
+   height: auto;
+   text-align: center;
+   margin-top: 60px;
+}
+
+.blog-image-card-var2 {
+    padding: 8px;
+    box-sizing: border-box;
+}
+.blog-image-card-var2-title {
+    font-size: 2.6rem;
+    color: #fff;
+    font-style: italic;
+    margin: 16px 0 10px;
+}
+.blog-image-card-var2 button {
+    width: 90%;
+}
+
+
+@media (max-width: 768px) {
+    .blogs-grid {
+        flex-direction: column;
+    }
+    .blogs-text-container {
+        width: 100%;
+    }
+    .blogs-image-container {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .blog-image-card {
+        width: 45%;
+    }
+    .blog-image-card-var2 {
+        width: 100%;
+        min-height: 305px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;        
+        margin-top: 40px;
+    }
+}

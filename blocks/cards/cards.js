@@ -1,17 +1,27 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
-    });
-    ul.append(li);
+  const divChildrens = block.children;
+
+  const cardsContainer = document.createElement('div');
+  cardsContainer.classList.add('container');
+  cardsContainer.innerHTML = '<div class="cards-grid"></div>';
+
+  [...divChildrens].forEach((element) => {
+    const cardImagePath = element.children[0].querySelector('img').src;
+    const cardTitleText = element.children[1].querySelector('h3').textContent.trim();
+    const cardDetailsText = element.children[1].querySelector('p').textContent.trim();
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = `
+            <div class="card-image">
+                <img src="${cardImagePath}" alt="Card Image">
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">${cardTitleText}</h2>
+                <p class="card-details">${cardDetailsText}</p>
+            </div>
+        `;
+    cardsContainer.querySelector('.cards-grid').appendChild(card);
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.replaceChildren(ul);
+
+  block.replaceChildren(cardsContainer);
 }
