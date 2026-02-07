@@ -1,6 +1,7 @@
 .cards {
     margin: 24px 0;
 }
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -10,6 +11,7 @@
 .card {
     text-align:center;
 }
+
 .card img {
     width:100%
 }
@@ -18,12 +20,13 @@
 .card-title {
     margin: 20px 0;
 }
+
 .card-details {
     font-size: 1rem;
     line-height: 1.8rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (width <= 768px) {
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }

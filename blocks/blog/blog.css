@@ -21,15 +21,17 @@
 .blogs-text-container h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    font-style: italic;    
+    font-style: italic;
 }
+
 .blogs {
-    background-color: #0f3f5b;;
+    background-color: #0f3f5b;
 }
 
 .blog-card {
     margin-bottom: 30px;
 }
+
 .blog-header {
     display: flex;
     justify-content: space-between;
@@ -40,10 +42,12 @@
     font-size: 1.25rem;
     margin: 6px 0;
 }
+
 .blog-date {
     font-size: 0.9rem;
     color: #3aabf5;
 }
+
 .blog-description {
     font-size: 1rem;
     line-height: 1.5;
@@ -52,11 +56,10 @@
 
 .blog-card-link {
     font-size: 1rem;
-    color: rgb(72, 72, 255);
+    color: rgb(72 72 255);
     display: flex;
     justify-content: flex-end;
 }
-
 
 .blogs-image-container {
     width: 23%;
@@ -79,48 +82,48 @@
 }
 
 .blog-image-card-var2 {
-   /* background: var(--blogCardImg) no-repeat center; */
-   background-color: green;
-   background-size: cover;
-   min-height: 191px;
-   width: 96%;
-   height: auto;
-   text-align: center;
-   margin-top: 60px;
-}
-
-.blog-image-card-var2 {
+    background-color: green;
+    background-size: cover;
+    min-height: 191px;
+    width: 96%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
     padding: 8px;
     box-sizing: border-box;
 }
+
 .blog-image-card-var2-title {
     font-size: 2.6rem;
     color: #fff;
     font-style: italic;
     margin: 16px 0 10px;
 }
+
 .blog-image-card-var2 button {
     width: 90%;
 }
 
-
-@media (max-width: 768px) {
+@media screen and (width <= 768px) {
     .blogs-grid {
         flex-direction: column;
     }
+
     .blogs-text-container {
         width: 100%;
     }
+
     .blogs-image-container {
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: center;
         margin-left: 0;
     }
+
     .blog-image-card {
         width: 45%;
     }
+
     .blog-image-card-var2 {
         width: 100%;
         min-height: 305px;
@@ -128,7 +131,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 32px;        
+        gap: 32px;
         margin-top: 40px;
     }
 }

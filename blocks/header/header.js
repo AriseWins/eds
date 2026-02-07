@@ -17,10 +17,10 @@ export default async function decorate(block) {
   mainNavContainer.classList.add('main-nav');
   const navItem = document.createElement('div');
   navItem.classList.add('container');
-  navItem.innerHTML = `<div class="nav-wrapper"></div>`;
+  navItem.innerHTML = '<div class="nav-wrapper"></div>';
   mainNavContainer.appendChild(navItem);
 
-    // Create nav links container
+  // Create nav links container
   const navLinkContainer = document.createElement('div');
   navLinkContainer.classList.add('nav-links-wrapper');
 
@@ -36,26 +36,21 @@ export default async function decorate(block) {
   [...headerLinks.children].forEach((link, index) => {
     const navLink = document.createElement('div');
     navLink.classList.add('nav-link');
-    if(index === 0) {
-        navLink.innerHTML = `<a href="/">${link.textContent}</a>`;
-    }
-    else {
+    if (index === 0) {
+      navLink.innerHTML = `<a href="/">${link.textContent}</a>`;
+    } else {
       navLink.innerHTML = `<a href="/${link.textContent.replaceAll(' ', '')}">${link.textContent}</a>`;
     }
     navItem.querySelector('.nav-links-wrapper').appendChild(navLink);
-  })
-
+  });
 
   // // Add active link class based on current path
   const navLinks = navItem.querySelectorAll('.nav-link a');
-  navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-          link.classList.add('active-link');
-      }
+  navLinks.forEach((link) => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active-link');
+    }
   });
-
-
-
 
   mainNavContainer.append(headerBottomLine);
   block.append(mainNavContainer);

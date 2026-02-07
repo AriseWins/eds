@@ -4,6 +4,7 @@
     background-size: cover;
     padding-bottom: 32px;
 }
+
 .footer-grid {
     display: flex;
     padding: 18px 0 ;
@@ -30,7 +31,6 @@
   font-size: 1rem;
     color: #7d99ac;
     text-decoration: none;
-    margin: 8px 0;
     display: inline-block;
     padding: 4px 0 10px;
     margin: 5px 0;
@@ -44,6 +44,7 @@
     display: flex;
     padding-left: 10px;
 }
+
 .newsletter-description {
     color: #7d99ac;
     padding-top: 4px;
@@ -83,17 +84,20 @@
 }
 
 
-@media  (max-width:768px) {
+@media screen and (width <= 768px) {
     .footer {
         background-position: 98%;
     }
+
     .footer-grid {
         flex-direction: column;
     }
+
     .footer-links-section-wrapper {
         width: 100%;
         gap: 10%;
     }
+
     .footer-newsletter-section {
         width: 100%;
         padding-left: 0;
@@ -116,7 +120,7 @@
     }
 }
 
-@media  (max-width:1024px) {
+@media screen and (width <= 1024px) { 
     .footer {
         background-position: 91%;
     }

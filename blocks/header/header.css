@@ -35,7 +35,7 @@
 }
 
 .nav-link a:hover {
-    color: rgb(86, 86, 237);
+    color: rgb(86 86 237);
     transition: .5s color ease;
 }
 
